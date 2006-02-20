@@ -80,7 +80,9 @@ $(OBJROOT)/$(PROJECT):
 	echo ed - $(PROJECT)/Mac/OSX/PythonLauncher/PythonLauncher.pbproj/project.pbxproj \< $(FIX)/ProjectLauncher.pbproj-project.pbxproj.ed && \
 	ed - $(PROJECT)/Mac/OSX/PythonLauncher/PythonLauncher.pbproj/project.pbxproj < $(FIX)/ProjectLauncher.pbproj-project.pbxproj.ed && \
 	echo ed - $(PROJECT)/Modules/_localemodule.c \< $(FIX)/_localemodule.c.ed && \
-	ed - $(PROJECT)/Modules/_localemodule.c < $(FIX)/_localemodule.c.ed
+	ed - $(PROJECT)/Modules/_localemodule.c < $(FIX)/_localemodule.c.ed && \
+	echo ed - $(PROJECT)/Python/mactoolboxglue.c \< $(FIX)/mactoolboxglue.c.ed && \
+	ed - $(PROJECT)/Python/mactoolboxglue.c < $(FIX)/mactoolboxglue.c.ed
 
 install: installpython installextras
 
